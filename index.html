@@ -187,6 +187,7 @@ body {
 }
 .tag-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-lt); }
 .tag-btn.active { background: var(--blue); color: #fff; border-color: var(--blue); box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2); }
+.tag-btn.active .lucide { color: #fff !important; }
 .tag-btn .tc { font-size: 11px; opacity: .8; margin-left: 2px; }
 
 /* ── FAQ 아코디언 ── */
@@ -269,25 +270,25 @@ mark { background: #fff176; color: var(--text); border-radius: 2px; padding: 0 2
     <div class="content">
       <!-- 검색 -->
       <div class="faq-searchbar">
-        <i data-lucide="search"></i>
+        <i data-lucide="search" style="color: var(--blue);"></i>
         <input type="text" id="faqSearch" placeholder="질문 내용을 검색하세요 (예: API, 승인, 세금계산서...)" oninput="searchFaq(this.value)">
         <span class="search-count" id="searchCount">47개</span>
       </div>
       <!-- 태그 필터 -->
       <div class="tag-filters" id="tagFilters">
-        <button class="tag-btn active" onclick="filterByTag('전체',this)"><i data-lucide="home"></i>전체 <span class="tc">47</span></button>
-        <button class="tag-btn" onclick="filterByTag('저작권/라이선스',this)"><i data-lucide="scale"></i>저작권/라이선스 <span class="tc">6</span></button>
-        <button class="tag-btn" onclick="filterByTag('API 서비스',this)"><i data-lucide="plug"></i>API 서비스 <span class="tc">7</span></button>
-        <button class="tag-btn" onclick="filterByTag('분석용 뉴스데이터',this)"><i data-lucide="database"></i>분석용 데이터 <span class="tc">5</span></button>
-        <button class="tag-btn" onclick="filterByTag('기사 단건 구매',this)"><i data-lucide="file-text"></i>단건 구매 <span class="tc">6</span></button>
-        <button class="tag-btn" onclick="filterByTag('사진/이미지 구매',this)"><i data-lucide="image"></i>사진/이미지 <span class="tc">4</span></button>
-        <button class="tag-btn" onclick="filterByTag('결제/입금',this)"><i data-lucide="credit-card"></i>결제/입금 <span class="tc">4</span></button>
-        <button class="tag-btn" onclick="filterByTag('세금계산서/정산',this)"><i data-lucide="receipt"></i>세금계산서 <span class="tc">4</span></button>
-        <button class="tag-btn" onclick="filterByTag('구매 승인/거절',this)"><i data-lucide="check-square"></i>승인/거절 <span class="tc">3</span></button>
-        <button class="tag-btn" onclick="filterByTag('견적/가격 문의',this)"><i data-lucide="coins"></i>견적/가격 <span class="tc">3</span></button>
-        <button class="tag-btn" onclick="filterByTag('크리에이터',this)"><i data-lucide="clapperboard"></i>크리에이터 <span class="tc">2</span></button>
-        <button class="tag-btn" onclick="filterByTag('회원가입/계정',this)"><i data-lucide="user"></i>회원/계정 <span class="tc">1</span></button>
-        <button class="tag-btn" onclick="filterByTag('언론사 입점/제휴',this)"><i data-lucide="handshake"></i>입점/제휴 <span class="tc">2</span></button>
+        <button class="tag-btn active" onclick="filterByTag('전체',this)"><i data-lucide="home" style="color: var(--blue);"></i>전체 <span class="tc">47</span></button>
+        <button class="tag-btn" onclick="filterByTag('저작권/라이선스',this)"><i data-lucide="scale" style="color: var(--blue);"></i>저작권/라이선스 <span class="tc">6</span></button>
+        <button class="tag-btn" onclick="filterByTag('API 서비스',this)"><i data-lucide="plug" style="color: var(--green);"></i>API 서비스 <span class="tc">7</span></button>
+        <button class="tag-btn" onclick="filterByTag('분석용 뉴스데이터',this)"><i data-lucide="database" style="color: var(--amber);"></i>분석용 데이터 <span class="tc">5</span></button>
+        <button class="tag-btn" onclick="filterByTag('기사 단건 구매',this)"><i data-lucide="file-text" style="color: var(--red);"></i>단건 구매 <span class="tc">6</span></button>
+        <button class="tag-btn" onclick="filterByTag('사진/이미지 구매',this)"><i data-lucide="image" style="color: var(--green);"></i>사진/이미지 <span class="tc">4</span></button>
+        <button class="tag-btn" onclick="filterByTag('결제/입금',this)"><i data-lucide="credit-card" style="color: var(--green);"></i>결제/입금 <span class="tc">4</span></button>
+        <button class="tag-btn" onclick="filterByTag('세금계산서/정산',this)"><i data-lucide="receipt" style="color: var(--amber);"></i>세금계산서 <span class="tc">4</span></button>
+        <button class="tag-btn" onclick="filterByTag('구매 승인/거절',this)"><i data-lucide="check-square" style="color: var(--red);"></i>승인/거절 <span class="tc">3</span></button>
+        <button class="tag-btn" onclick="filterByTag('견적/가격 문의',this)"><i data-lucide="coins" style="color: var(--blue);"></i>견적/가격 <span class="tc">3</span></button>
+        <button class="tag-btn" onclick="filterByTag('크리에이터',this)"><i data-lucide="clapperboard" style="color: var(--amber);"></i>크리에이터 <span class="tc">2</span></button>
+        <button class="tag-btn" onclick="filterByTag('회원가입/계정',this)"><i data-lucide="user" style="color: var(--green);"></i>회원/계정 <span class="tc">1</span></button>
+        <button class="tag-btn" onclick="filterByTag('언론사 입점/제휴',this)"><i data-lucide="handshake" style="color: var(--red);"></i>입점/제휴 <span class="tc">2</span></button>
       </div>
       <!-- FAQ 목록 -->
       <div class="faq-list" id="faqListAll"></div>
